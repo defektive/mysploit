@@ -1,0 +1,40 @@
+@import "chrome://mysploit/content/skin/menu.css";
+@import "chrome://mysploit/content/skin/tabs.css";
+
+.ms.logo {
+    height: 32px;
+    width: 32px;
+    list-style-image: url("chrome://mysploit/content/skin/icon.png");
+    border: 3px solid #333;
+}
+
+#mysploit_window{
+    background: #666;
+    border: 1px solid #999;
+}
+
+#cmd-console{
+    width: 100%;
+    background: #333;
+    color:#fff;
+    border: 1px solid #999;
+}
+textbox{
+    margin: 0px !important;
+    border: none !important;
+    padding: 0px !important;
+    width: 400px;
+    background: #333;
+    color:#fff;
+}
+
+.url {
+  color: #ff0000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.url:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+
+<?xul-overlay href="chrome://global/content/globalOverlay.xul"?>
+<?xul-overlay href="chrome://mysploit/content/xul/menu.xul"?>
+
+
+<!DOCTYPE window SYSTEM "chrome://mysploit/locale/mysploit.dtd">
+<window
+  id="mysploit_window"
+  height="700"
+  width="900"
+  title="MySploit"
+  persist="screenX screenY width height"
+  contextmenu="mysploit-contextMenu"
+  windowtype="mozapp:MySploit"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/TR/WD-rdf-syntax#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+
+    <script type="application/x-javascript" src="chrome://jslib/content/jslib.js" />
+    <script type="application/x-javascript" src="chrome://mysploit/content/scripts/MySploitCore.js" />
+    <overlaytarget id="mysploit-menu"/>
+    <overlaytarget id="mysploit-content"/>
+
+      <tabbox id="mysploit-tabs" selectedIndex="0" flex="2">
+      <tabs>
+        <tab label="XSS"/>
+        <!--
+        <tab label="Console"/>
+        <tab label="File Browser"/>
+        <tab label="Meh"/> -->
+      </tabs>
+      <tabpanels flex="2">
+
+        <tabpanel><browser type="content" src="chrome://mysploit/content/xul/xss.xul" flex="1"/></tabpanel>
+        <!--
+        <tabpanel></tabpanel>
+        <tabpanel><browser type="content" src="" flex="1"/></tabpanel>
+        <tabpanel><browser type="content" src="chrome://mysploit/skin/minimize.gif" flex="1" id="browser-two"/></tabpanel>
+        -->
+      </tabpanels>
+    </tabbox>
+
+
+</window>

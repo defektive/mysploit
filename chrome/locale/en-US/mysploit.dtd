@@ -1,0 +1,21 @@
+<!ENTITY mysploit.label "mysploit">
+<!ENTITY mysploit.phrase "A neat little tool">
+<!ENTITY mysploit.accesskey "M">
+<!ENTITY mysploit.tooltip "A neat little tool">
+<!ENTITY mysploit.homepage "http://mysploit.com/">
+
+<!ENTITY mysploit.about.title "About">
+<!ENTITY mysploit.about.author "Created By:">
+<!ENTITY mysploit.about.contributors "Contributors:">
+<!ENTITY mysploit.about.homepage "HomePage:">
+
+<!ENTITY mysploit.option.title "Settings">
+<!ENTITY mysploit.option.general "General">
+<!ENTITY mysploit.option.payloads "Payloads">
+<!ENTITY mysploit.option.SQL "SQL">
+<!ENTITY mysploit.option.xssedAlias "XSSed Alias">
+
+<!ENTITY mysploit.XSS.payloads  "Payloads">
+<!ENTITY mysploit.XSS.notes     "Notes">
+<!ENTITY mysploit.XSS.fields    "Fields">
+<!ENTITY mysploit.XSS.debug     "Debug">

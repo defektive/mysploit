@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+<?xml-stylesheet href="chrome://mysploit/content/skin/main.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mysploit/content/bindings/bindings.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://mysploit/locale/mysploit.dtd">
+<window
+  id="mysploit_window"
+  height="700"
+  width="900"
+  hidechrome="true"
+  title="MySploit"
+  contextmenu="mysploit-contextMenu"
+  windowtype="MySploit:Core"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/TR/WD-rdf-syntax#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://global/content/nsUserSettings.js" />
+      <script type="application/x-javascript" src="chrome://jslib/content/jslib.js" />
+      <script type="application/x-javascript" src="chrome://mysploit/content/scripts/mootools-beta-1.2b1.js"/>
+      <script type="application/x-javascript" src="chrome://mysploit/content/scripts/window-functions.js"/>
+      <script type="application/x-javascript" src="chrome://mysploit/content/scripts/mysploit.js"/>
+
+    <popup id="mysploit-contextMenu">
+    </popup>
+    <popup id="mysploit-hostContext">
+        <menu id="mysploit-hostTools" label="Tools" >
+          <menupopup id="mysploit-hostTools-popup" />
+        </menu>
+        <menu label="Open" >
+          <menupopup>
+             <menuitem label="Url" oncommand=""/>
+             <menuitem label="/etc/passwd"/>
+          </menupopup>
+        </menu>
+        <menuitem label="Use In Console" oncommand=""/>
+        <menuseparator/>
+        <menuitem label="Edit" oncommand=""/>
+    </popup>
+      <menubar id="mysploit_menubar">
+        <menu id="file-menu" label="File">
+          <menupopup id="file-popup">
+            <menuitem label="Save" oncommand="msObj.save()"/>
+            <menuseparator/>
+            <menuitem label="Exit" oncommand="window.close();"/>
+          </menupopup>
+        </menu>
+        <menu id="mysploit-tools" label="Tools" >
+          <menupopup id="mysploit-tools-popup" />
+        </menu>
+          <spacer flex="3"  />
+          <box class="button draggable"/>
+          <box class="button minimize"   onclick="myChrome.minimize()"/>
+          <box class="button maximize"   onclick="myChrome.toggle_maximize();"/>
+          <box class="button close"      onclick="myChrome.close()"/>
+      </menubar>
+
+    <tabbox id="my-sploit-ma in_tabs" selectedIndex="0" flex="2">
+      <tabs>
+        <tab label="Hosts"/>
+        <tab label="Console"/>
+        <tab label="File Browser"/>
+        <tab label="Meh"/>
+      </tabs>
+      <tabpanels flex="2">
+        <tabpanel>
+            <hbox flex="2">
+            <groupbox flex="1">
+            	<caption label="Current Hosts"/>
+            	<!-- query entries -->
+            	<listbox id="hostList"
+            		flex="16"
+            		seltype="multiple"
+            		context="mysploit-hostContext">
+                    <listhead>
+                		<listheader style="min-width: 100px" label="Host"/>
+                		<listheader style="min-width: 75px" label="Download"/>
+                		<listheader style="min-width: 75px" label="List"/>
+                		<listheader style="min-width: 75px" label="Upload"/>
+                		<listheader style="min-width: 75px" label="RCE"/>
+                	</listhead>
+                	<listcols flex="16">
+                	    <listcol/>
+                	    <listcol/>
+                	    <listcol/>
+                	    <listcol/>
+                	    <listcol/>
+                	</listcols>
+                </listbox>   		
+            </groupbox>
+            </hbox>
+            <hbox flex="2">
+            <groupbox flex="1">
+            	<caption label="Edit / Add Host"/>
+            	<label value="Host"/>
+                <textbox id="host"/>
+            	<label value="Action"/>
+                <textbox id="action"/>
+                <textbox id="action-op" multiline="true"/>
+            	
+            	
+            	
+            	
+                	   		
+                <button label="Add Host" oncommand="msObj.addHost($('host').value)"/>
+            </groupbox>
+            </hbox>
+        </tabpanel>
+        <tabpanel>
+
+        <vbox>
+            <textbox flex="2" id="cmd-display" multiline="true"/>
+            <textbox id="cmd-console"/>
+          <box class="button close"    onclick="exec($('cmd-console'))"/>
+          <checkbox label="PHP" id="console-php-checkbox" checked="false"/>
+          </vbox>
+        </tabpanel>
+        <tabpanel><browser type="content" src="chrome://extensiondev/content/shell.xul" flex="1"/></tabpanel>
+        <tabpanel><browser type="content" src="chrome://mysploit/skin/minimize.gif" flex="1" id="browser-two"/></tabpanel>
+      </tabpanels>
+    </tabbox>
+</window>

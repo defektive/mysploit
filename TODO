@@ -1,0 +1,54 @@
+[X] = done
+[N] = Not Applicable
+[?] = Wondering if we need it now
+[ ] = Needs to be resolved
+
+-------------------------------------------------
+
+** Preferences
+[X] xssed alias
+[ ] Add Payloads
+[ ] Enable/Disable [Auto|Manual|None] Modules (SiteProfiling)
+
+*** Profiling
+[ ] Check secunia for profiled site results
+
+
+*** XSS
+[X] Submit to xssed
+[ ] grep source for REQUEST data
+[X] force GET/POST
+[X] Load default javascript snippet into XSS Panel
+[X] Fix gBrowser
+[X] Pull in input fields
+    xpath inputs// auto form detect/populate
+[X] make input fields use a check box instead of a tree
+[X] when code changes it updates select checkbox fields
+[X] have eval run in the context of the document
+[N] HTTP Replay
+[N] form validation hijack
+[?] highlight/scrollto field on page when hovering
+[?] Select re-eval
+[ ] Parse URL
+[ ] Display URL
+[X] Make code functions work on selection
+[ ] Add submit to xssed to tab view
+[X] Fix form action fetching
+[ ] find iframes, frames,
+[X] fix input finder
+[ ] (10:18:27 PM) mckt: I really want hackbaresque GET/URL mangling
+
+*** Payloads
+[X] Separate out users'  snippets to so they don't get overwritten when updating
+[ ] Add "Payload Library" Menu
+    JS
+       |-- Snippet
+       |-- Snippet
+       |-- Snippet
+    Type
+       |-- Snippet
+       |-- Snippet
+       |-- Snippet
+
+*** Most Important ***
+[?] Make it useful

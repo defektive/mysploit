@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<overlay id="mysploit-menu-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <overlaytarget id="mysploit-menu">
+      <toolbar flex="1">
+          <menubar flex="1" id="mysploit_menubar"  >
+            <menu id="file-menu" label="File">
+              <menupopup id="file-popup">
+                <!--<menuitem label="Save" oncommand="msObj.save()"/>
+                <menuseparator/>-->
+                <menuitem label="Exit" oncommand="window.close();"/>
+              </menupopup>
+            </menu>
+    <!--        <menu id="mysploit-tools" label="Tools" >
+              <menupopup id="mysploit-tools-popup" />
+            </menu>-->
+          </menubar>
+      </toolbar>
+  </overlaytarget>
+</overlay>

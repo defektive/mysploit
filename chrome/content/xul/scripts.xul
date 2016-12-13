@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<overlay id="mysploit-scripts-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <overlaytarget id="mysploit-scripts">
+      <script type="application/x-javascript" src="chrome://jslib/content/jslib.js" />
+      <script type="application/x-javascript" src="chrome://mysploit/content/scripts/ms.utilities.js" />
+      <script type="application/x-javascript" src="chrome://mysploit/content/scripts/ms.lib.js" />
+  </overlaytarget>
+</overlay>

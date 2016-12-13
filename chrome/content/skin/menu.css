@@ -1,0 +1,31 @@
+
+#mysploit_menubar {
+    background: #333;
+    color: #fff;
+}
+
+#mysploit_menubar > menu{
+    color: #fff;
+
+}
+
+.button{
+    height: 16px;
+    width: 16px;
+}
+
+.button.draggable{
+    background: url('chrome://mysploit/content/skin/window/grippy.png');
+}
+
+.button.minimize{
+    background: url('chrome://mysploit/content/skin/window/close-light.png') center no-repeat;
+}
+
+.button.maximize{
+    background: url('chrome://mysploit/content/skin/window/close-light.png')  center no-repeat;
+}
+
+.button.close{
+    background: url('chrome://mysploit/content/skin/window/close-light.png')  center no-repeat;
+}

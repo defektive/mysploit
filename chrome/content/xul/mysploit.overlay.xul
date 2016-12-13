@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://mysploit/locale/mysploit.dtd">
+<overlay id="mysploit-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript" src="chrome://jslib/content/jslib.js" />
+    <script type="application/x-javascript" src="chrome://mysploit/content/scripts/MySploitCore.js" />
+    <script type="application/x-javascript" src="chrome://mysploit/content/scripts/MySploitSiteProfiler.js" />
+    <script type="application/x-javascript" src="chrome://mysploit/content/scripts/MySploitContextMenu.js" />
+    <script type="application/x-javascript" src="chrome://mysploit/content/scripts/MySploitXSSed.js" />
+
+
+
+	<keyset>
+	  <key id="mysploit-open-panel" modifiers="control" keycode="VK_F1" action="dialog::chrome://mysploit/content/xul/mysploit.xul" oncommand="MySploit.runAction(event)"/>
+	</keyset>
+
+  <!-- menu -->
+  <menupopup id="menu_ToolsPopup">
+   	<menu id="mysploit-tools-menu" label="&mysploit.label;" insertbefore="devToolsSeparator" position="9"
+      accesskey="&mysploit.accesskey;" class="menu-iconic mysploit-small"
+      mode="patterns" persist="mode">
+      <menupopup name="MySploitMenu" id="mysploit-toolsmenu-popup"/>
+    </menu>
+  </menupopup>
+
+    <popup id="contentAreaContextMenu">
+      <menu id="mysploit-context" label="&mysploit.label;" insertafter="context-sep-stop">
+        <menupopup name="MySploitMenu" id="mysploit-context-popup" />
+      </menu>
+    </popup>
+
+
+
+    <statusbar id="status-bar">
+        <hbox>
+        <menu id="ms-status-bar" class="menu-iconic">
+            <label id="ms-status" value="&mysploit.label;" tooltiptext="&mysploit.tooltip;"/>
+            <menupopup id="ms-option-menu">
+                <label  value="&mysploit.label;"/>
+                <menuseparator />
+				<menuitem label="&mysploit.option.title;" oncommand="MySploit.runAction(event)" action="dialog::chrome://mysploit/content/default/options.xul" />
+                <!--<menu label="test">-->
+                <!--    <menupopup onpopupshowing="">-->
+                <!--    </menupopup>-->
+                <!--</menu>-->
+                <menuitem oncommand=""  label="" action="" />
+            </menupopup>
+        </menu>
+        </hbox>
+    </statusbar>
+</overlay>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://mysploit/content/default/options.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://mysploit/locale/mysploit.dtd">
+
+<prefwindow id="mysploit-prefs"
+    title="&mysploit.option.title;"
+    buttons="accept"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <prefpane id="mysploit-pane1" label="&mysploit.option.general;">
+        <preferences>
+            <preference id="pref_mysploit_xssed_alias" name="MySploit.xssed.alias" instantApply="true" type="string"/>
+        </preferences>
+
+        <groupbox>
+            <vbox>
+                <label control="MySploit.xssed.alias" value="&mysploit.option.xssedAlias;"/>
+                <textbox preference="pref_mysploit_xssed_alias" id="mysploit.url"/>
+            </vbox>
+        </groupbox>
+    </prefpane>
+
+
+    <prefpane id="mysploit-pane2" label="&mysploit.option.payloads;">
+    <preferences>
+
+    </preferences>
+
+
+    <groupbox>
+    <vbox>
+    <checkbox />
+    </vbox>
+    </groupbox>
+    </prefpane>
+
+
+    <script type="application/x-javascript" src="chrome://global/content/nsUserSettings.js" />
+
+    <stringbundleset id="mysploitSet">
+    <stringbundle id="mysploitStrings" src="chrome://mysploit/locale/mysploit.properties" />
+    </stringbundleset>
+
+</prefwindow>
